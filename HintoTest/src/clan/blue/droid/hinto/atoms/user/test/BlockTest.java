@@ -36,7 +36,6 @@ public class BlockTest extends TestCase {
     }
     
     public void testPerform() {
-        
         Long value1 = 2L;
         Long value2 = 3L;
         Long expected = value1 + value2;
