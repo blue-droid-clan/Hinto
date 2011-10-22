@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 import clan.blue.droid.common.util.DateTimeUtil;
 import clan.blue.droid.common.util.StringUtils;
 import clan.blue.droid.hinto.atoms.Data;
+import clan.blue.droid.hinto.atoms.Link;
 import clan.blue.droid.hinto.atoms.base.SystemAtomTypes;
 
 public class DataTest extends TestCase {
@@ -41,9 +42,10 @@ public class DataTest extends TestCase {
         assertEquals(value, result);
     }
 
-    public void testGetNextDefaultsToNull() {
+    public void testGetNextDefaultsToLinkEnd() {
         Data next = data.getNext();
-        assertNull(next);
+        assertNotNull(next);
+        assertTrue(Link.Util.isLinkEnd(next));
     }
 
     private static final String VALUE_FIXTURE = "value_fixture";
