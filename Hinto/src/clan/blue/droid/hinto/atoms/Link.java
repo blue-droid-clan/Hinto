@@ -25,6 +25,16 @@ public interface Link extends Data {
         }
 
         @Override public Object getType() { return SystemAtomTypes.EndType; }
+
+        @Override
+        public String getDescription() {
+            return "Link.End: the terminal item in a Chain";
+        }
+        
+        @Override
+        public Data setDescription(String description) {
+            return this;
+        }
     };
     
     public static final class Util {

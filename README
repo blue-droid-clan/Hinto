@@ -2,9 +2,8 @@ hinto: elemental programming
 
 to do:
 	* Atoms
-		- Data
-			- add description String 
-			
+		- add toString() to all Foundation classes
+		
 		- Function
 			- public Data perform();
 			

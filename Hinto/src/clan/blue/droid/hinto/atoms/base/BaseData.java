@@ -18,6 +18,13 @@ public class BaseData implements Data {
     @Override public String getValue() { return value; }
     @Override public Data getNext() { return next;  }
     @Override public Object getType() { return type; }
+    @Override public String getDescription() { return description; }
+    
+    @Override
+    public Data setDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
     @Override public Data attach(Data next) {
         if (notCurrentlyAtEnd())
@@ -42,4 +49,5 @@ public class BaseData implements Data {
     private Data next;
     private Data end;
     private Object type;
+    private String description;
 }

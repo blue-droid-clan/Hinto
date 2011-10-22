@@ -43,4 +43,9 @@ public class BaseChain extends BaseFunction implements Chain {
     public Object getType() {
         return SystemAtomTypes.ChainType;
     }
+    
+    @Override
+    public String getDescription() {
+        return "Chain: a collection of Data items that are accessed via Data.getNext(); is a singly-linked list and can only be appended to at the current time.";
+    }
 }

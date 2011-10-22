@@ -20,6 +20,12 @@ public class DataTest extends TestCase {
         super.tearDown();
     }
     
+    public void testGetDescription() {
+        data.setDescription(DESCRIPTION_FIXTURE);
+        String result = data.getDescription();
+        assertEquals(DESCRIPTION_FIXTURE, result);
+    }
+    
     public void testGetType() {
         Object type = data.getType();
         assertNotNull(type);
@@ -49,4 +55,5 @@ public class DataTest extends TestCase {
     }
 
     private static final String VALUE_FIXTURE = "value_fixture";
+    private static final String DESCRIPTION_FIXTURE = "description_fixture";
 }
