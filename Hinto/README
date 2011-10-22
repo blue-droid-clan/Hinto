@@ -1,0 +1,37 @@
+- Atoms
+	- Data: information; can be linked together with other Data atoms, which is known as a chain (sequence)
+		- Function: action
+			- Test: returns boolean true or false
+			- Decision: runs test, performs action(s)
+			
+		- Index: represents a handle on the location of a Data atoms; offset from start or end of chain
+			- Decrementor
+			- Incrementor
+			
+		- chain:
+			- not sure if this needs to be an object; right now it's just a concept
+
+- Elements
+	- ReverseChain
+	- ForEach
+	- PlaceDecrementorAtStart
+	- PlaceDecrementorAtEnd
+	
+- Builtins
+	- (Data) clone: Data
+	- (Data) increment: Data
+	- (Data) decrement: Data
+	- (Data) foreach: Data perform: Function
+	
+- Plugs
+	- Console input
+	- EditText
+	- File
+	- Http
+	
+- Outlets
+	- Console output
+	- TextView
+	- File
+	- Http
+	
