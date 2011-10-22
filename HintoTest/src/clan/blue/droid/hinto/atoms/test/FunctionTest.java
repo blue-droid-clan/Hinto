@@ -25,20 +25,6 @@ public class FunctionTest extends TestCase {
         assertEquals(SystemAtomTypes.FunctionType, type);
     }
     
-    /*
-    public void testGetValue() {
-        fail("Not yet implemented");
-    }
-
-    public void testGetNext() {
-        fail("Not yet implemented");
-    }
-
-    public void testAttach() {
-        fail("Not yet implemented");
-    }
-     */
-    
     public void testFactoryCreateReturnsNonNull() throws Exception {
         Function function = Function.Factory.create();
         assertNotNull(function);
