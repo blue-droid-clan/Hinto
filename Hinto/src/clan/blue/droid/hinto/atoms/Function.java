@@ -8,4 +8,8 @@ public interface Function extends Data {
     public static final class Factory {
         public static Function create() { return new BaseFunction(Data.Factory.createTimestampedValue()); }
     }
+    
+    public static final Function NoOp = new BaseFunction("Function.NoOp") {
+        public Data perform(Data input) { return Data.Empty; };
+    };
 }

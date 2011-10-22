@@ -1,10 +1,127 @@
 hinto: elemental programming
 
 to do:
-	- Chain
-	- TerminalIsland
-	- UserDefinedData
-	- ForEach
-		- can it be implemented in hinto?
-	- 
+	* Atoms
+		- Data
+			- add description String 
+			
+		- Function
+			- public Data perform();
+			
+		- Number
+			- uses BigDecimal
+			- change Data.Factory
+				- create(Number value);
+
+		* UserDefinedFunction
+			- 
+			
+		* UserDefinedData
+			- Counter : UserDefinedFunction :: requires Number
+				- incrementValue: is the amount to modify the value by on each call to perform()
+				- Increment
+					- perform()
+						- value is added to incrementValue, result is returned
+						
+			* Block
+				- uses Chain
+					- re-implement some of this using user-defined objects
+						- a test-bed of sorts
+						- how
+							- prerequisites:
+								- Counter : Block
+									- Data perform(Data a)
+							- Counter numLinks;
+							
+			- screen location stuff:
+				- Point: requires Number
+					- LocationOnScreen : Point - helpful alias for readability sake
+				- Rectangle: requires Number
+
+			- ability to serialize UserDefinedData
+				- name
+				- id
+				- for Views
+					- Point on screen
+					
+			- Boolean
+			- Test(Data first, Data another) :: Boolean
+				- Equals
+				- And
+				- Or
+				- Not
+				- other boolean operations …
+			- Decision
+				- perform(Test test, Function truth, Function falsity);
+				
+			- Index: is it necessary?
+
+		- Testing Framework
+		- System
+			- Events
+			- IO
+				- Console
+				- File
+				- Shared Preferences
+				- Http
+			- Intents?
+			- Broadcast Receivers?
+			- Services?
+			- Processes?
+			- Concurrency? uh oh, here we go...
+			
+		- Chain
+			- need an easier way to add a bunch of items
+				- Chain
+					- public Chain addAll(Object ... items);
+					- public Chain addAll(Object[] items);
+				- Chain.Factory.createAddingAll(Object ... items)
+				- Chain.Factory.createAddingAll(Object[] items)
+				
+			- can specify the launch Function: Function to be performed when Chain.perform() is called
+				- i.e. given the Functions (print, evaluate, returnToStart, read)
+					you can specify "read" as the first Function to perform
 	
+	- Environment
+		- Development
+			- Runtime: state of the system as the user sees and experiences it
+			- Edit:  can tinker with the underlying mechanics of the Environment
+				- Design:
+				- Contract : Test :: requires Boolean, Test
+					- public Boolean precondition()
+						- if False is returned, it means the given Test failed
+						- throw Error?
+					- display of contracts is OFF by default
+						- can turn it on when editing, however
+				- Configuration: setup the default configuration for the Environment
+				- Testing: design and run the tests the Atoms in your Environment need
+				- Documentation:
+					- Development Docs
+					- RTFM: 
+						- would be nice to make this community-editable
+							- community ranks the best comments
+							- combines the best-of wikis and community-ranking systems
+			- Distributed: collaborative development, oh my
+			
+		- User
+			- Runtime
+			- Design
+			- Configuration
+			- Documentation: 
+				- RTFM
+			- Distributed: collaborative, interactive sharing of the experience, oh yes
+			
+	- Display
+		- DataView
+		- DevelopmentView : DataView
+			- LogCatView
+			- DocumentationView
+			- TestingView
+			- EnvironmentView
+			- DebuggingView
+			
+	- Workspace
+	- Ideas
+		- be able to specify that a function is performed after a given amount of time (for example, 150 milliseconds)
+					
+

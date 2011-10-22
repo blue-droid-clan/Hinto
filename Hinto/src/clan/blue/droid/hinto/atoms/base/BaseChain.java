@@ -2,6 +2,7 @@ package clan.blue.droid.hinto.atoms.base;
 
 import clan.blue.droid.hinto.atoms.Chain;
 import clan.blue.droid.hinto.atoms.Data;
+import clan.blue.droid.hinto.atoms.Function;
 
 public class BaseChain extends BaseFunction implements Chain {
 
@@ -24,10 +25,18 @@ public class BaseChain extends BaseFunction implements Chain {
         Integer numberOfLinksInChain = new Integer(numberOfLinks);
         return Data.Factory.create(numberOfLinksInChain.toString());
     }
+
+    @Override
+    public Function getNextStep() {
+        Data nextStepData = getNext();
+        if (nextStepData instanceof Function)
+            return (Function) nextStepData;
+        return Function.NoOp;
+    }
     
     @Override
     public Data perform(Data input) {
-        return null;
+        return Function.NoOp;
     }
 
     @Override

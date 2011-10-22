@@ -26,5 +26,18 @@ public interface Data {
             return sb.toString();
         }
     }
+    
+    // TODO: this will need to be extracted out; it does not belong in here
+    public static final class Converter {
+        public static final Data convertFrom(Number number) {
+            Long numberValue = number.longValue();
+            return Data.Factory.create(numberValue.toString());
+        }
+        public static final Number convertFrom(Data data) {
+            String dataValue = data.getValue();
+            return Long.parseLong(dataValue);
+        }
+    }
+    
     public static final Data Empty = Factory.create();
 }

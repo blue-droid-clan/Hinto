@@ -4,8 +4,9 @@ import java.math.BigDecimal;
 
 import clan.blue.droid.hinto.atoms.Chain;
 import clan.blue.droid.hinto.atoms.Data;
-import clan.blue.droid.hinto.atoms.Link;
 import clan.blue.droid.hinto.atoms.Function;
+import clan.blue.droid.hinto.atoms.Link;
+import clan.blue.droid.hinto.atoms.user.UserDefinedData;
 
 public class SystemAtomTypes {
     public static final Object UnknownType = BigDecimal.ZERO;
@@ -13,4 +14,5 @@ public class SystemAtomTypes {
     public static final Object FunctionType = Function.class;
     public static final Object ChainType = Chain.class;
     public static final Object EndType = Link.class;
+    public static final Object UserDefinedDataType = UserDefinedData.class;
 }
