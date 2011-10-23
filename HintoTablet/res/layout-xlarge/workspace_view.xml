@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/workspace_view_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff373737"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/workspace_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#77000000" >
+
+        <TextView
+            android:id="@+id/workspace_name_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff373737"
+            android:text="Workspace"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workspace_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.90" >
+
+        <LinearLayout
+            android:id="@+id/workspace_palette_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/workspace_atom_palette_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#78787878"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <include
+                        android:id="@+id/workspace_atom_palette"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        layout="@layout/atom_palette" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <AbsoluteLayout
+            android:id="@+id/workspace_sandbox_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </AbsoluteLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workspace_status_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/workspace_status_label"
+            style="@style/workspace_status_label_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/status" />
+
+        <TextView
+            android:id="@+id/workspace_status_view"
+            style="@style/workspace_status_view_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#77000000"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="Hello" />
+    </LinearLayout>
+
+</LinearLayout>

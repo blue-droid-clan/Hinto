@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 
+        data: #78f6b26b
+    function: #796aa84f
+       chain: #23ff00ff
+    -->
+    <solid android:color="#fff6b26b"/>
+</shape>

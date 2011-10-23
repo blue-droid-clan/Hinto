@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:padding="10dp">
+
+            <TextView
+                android:id="@+id/atom_palette_data_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/data_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/data" style="@style/atom_palette_item_text_style"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:padding="10dp">
+
+            <TextView
+                android:id="@+id/atom_palette_function_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/function_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/function" style="@style/atom_palette_item_text_style"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/atom_palette_block_view"
+                style="@style/atom_palette_item_text_style_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/block_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/block" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:padding="10dp">
+
+            <TextView
+                android:id="@+id/atom_palette_chain_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chain_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/chain" style="@style/atom_palette_item_text_style"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

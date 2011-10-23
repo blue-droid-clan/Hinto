@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="atom_palette_item_text_style">
+        <item name="android:textColor">#ff434343</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="atom_palette_item_text_style_white" parent="atom_palette_item_text_style">
+        <item name="android:textColor">#ff898989</item>
+    </style>
+    
+        
+    <style name="workspace_status_label_text_style">
+        <item name="android:textColor">#ff934343</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="workspace_status_view_text_style" parent="workspace_status_label_text_style">
+        <item name="android:textColor">#ff939393</item>
+<!--         <item name="android:textSize">8pt</item> -->
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>

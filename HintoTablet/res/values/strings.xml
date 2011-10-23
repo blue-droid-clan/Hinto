@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="hello">Hello World, HintoTabletActivity!</string>
+    
     <string name="app_name">HintoTablet</string>
+    <string name="block">Block</string>
+    <string name="chain">Chain</string>
+    <string name="data">Data</string>
+    <string name="function">Function</string>
+    <string name="status">Status</string>
 
 </resources>
