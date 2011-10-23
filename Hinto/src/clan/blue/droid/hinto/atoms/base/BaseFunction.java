@@ -8,6 +8,7 @@ public class BaseFunction extends BaseData implements Function {
     public BaseFunction(String value) { super(value); }
     
     @Override public Data perform(Data input) { return Data.Empty; }
+    @Override public Data perform() { return Data.Empty; }
     @Override public Object getType() { return SystemAtomTypes.FunctionType; }
     @Override public String getDescription() { return "Function: a performable action"; }
 }

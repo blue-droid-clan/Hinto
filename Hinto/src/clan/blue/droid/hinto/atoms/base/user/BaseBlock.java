@@ -11,13 +11,14 @@ public class BaseBlock extends BaseUserDefinedData implements Block {
         super(name);
         actionsToPerform = Chain.Factory.create();
     }
-
+    
     @Override
     public Data perform(Data input) {
         Function nextStep = actionsToPerform.getNextStep();
         Data result = nextStep.perform(input);
         return result;
     }
+    @Override public Data perform() { return perform(Data.Empty); }
 
     @Override
     public void appendStep(Function step) {

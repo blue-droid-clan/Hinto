@@ -2,9 +2,6 @@ hinto: elemental programming
 
 to do:
 	* Atoms
-		- Function
-			- public Data perform();
-			
 		- Number
 			- uses BigDecimal
 			- change Data.Factory
