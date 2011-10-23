@@ -1,30 +1,63 @@
 hinto: elemental programming
 
 to do:
+	- bootstrap: a primordial hinto app
+		- ability to create a new Data item
+			- enter name via keyboard
+			
+		- able to drag new item around screen
+		
+		- able to save current state of app, then restore at a later time
+		
+		- implements modes
+			- design
+			- use
+		
+		- basic workspace management
+		
+	- Workspace Management
+		- Project
+			- Task
+				- Step
+				
+	- Application Modes of Use
+		- Developing
+			- Designing / Coding
+			- Testing
+		- Using
+		
+	- Serialization Framework
+		- needs to be very lightweight
+		- not very feature rich
+		- byte[] initially
+			- then JSON
+			
+	- Testing Framework
+		- just like other testing frameworks, but smarter
+		- try to automate most of the low-hanging fruit
+			- i.e. null check, boundary conditions, etc.
+			
+	- System
+		- Events
+		- IO
+			- Console
+			- File
+			- Shared Preferences
+			- Http
+		- Intents?
+		- Broadcast Receivers?
+		- Services?
+		- Processes?
+		- Concurrency? uh oh, here we go...
+		
 	* Atoms
 		* UserDefinedData
-			- Counter : UserDefinedFunction :: requires Number
-				- incrementValue: is the amount to modify the value by on each call to perform()
-				- Increment
-					- perform()
-						- value is added to incrementValue, result is returned
-						
-			* Block
-				- uses Chain
-					- re-implement some of this using user-defined objects
-						- a test-bed of sorts
-						- how
-							- prerequisites:
-								- Counter : Block
-									- Data perform(Data a)
-							- Counter numLinks;
-							
 			- screen location stuff:
 				- Point: requires Number
 					- LocationOnScreen : Point - helpful alias for readability sake
 				- Rectangle: requires Number
 
-			- ability to serialize UserDefinedData
+			- ability to serialize UserDefinedData :: requires Serialization Framework
 				- name
 				- id
 				- for Views
@@ -42,19 +75,6 @@ to do:
 				
 			- Index: is it necessary?
 
-		- Testing Framework
-		- System
-			- Events
-			- IO
-				- Console
-				- File
-				- Shared Preferences
-				- Http
-			- Intents?
-			- Broadcast Receivers?
-			- Services?
-			- Processes?
-			- Concurrency? uh oh, here we go...
 			
 		- Chain
 			- need an easier way to add a bunch of items
@@ -105,9 +125,12 @@ to do:
 			- TestingView
 			- EnvironmentView
 			- DebuggingView
-			
+	
 	- Workspace
 	- Ideas
-		- be able to specify that a function is performed after a given amount of time (for example, 150 milliseconds)
-					
+		- would like to be able to specify that a function is performed after a given amount of time (for example, 150 milliseconds)
+		- voice input
+			- for naming newly minted items
+			- commands:
+				- i.e. create function
 
