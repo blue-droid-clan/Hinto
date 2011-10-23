@@ -2,14 +2,6 @@ hinto: elemental programming
 
 to do:
 	* Atoms
-		- Number
-			- uses BigDecimal
-			- change Data.Factory
-				- create(Number value);
-
-		* UserDefinedFunction
-			- 
-			
 		* UserDefinedData
 			- Counter : UserDefinedFunction :: requires Number
 				- incrementValue: is the amount to modify the value by on each call to perform()
