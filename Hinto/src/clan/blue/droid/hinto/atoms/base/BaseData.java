@@ -43,6 +43,19 @@ public class BaseData implements Data {
     protected boolean notAtLinkEnd(Data link) {
         return link != Link.End;
     }
+    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("      value: ").append(value);
+        sb.append("       next: ").append(next);
+        sb.append("        end: ").append(end);
+        sb.append("       type: ").append(type);
+        sb.append("description: ").append(description);
+
+        return sb.toString();
+    }
 
     private static final Object DefaultType = SystemAtomTypes.DataType;
     private String value;

@@ -2,8 +2,6 @@ hinto: elemental programming
 
 to do:
 	* Atoms
-		- add toString() to all Foundation classes
-		
 		- Function
 			- public Data perform();
 			

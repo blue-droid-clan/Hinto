@@ -35,6 +35,8 @@ public interface Link extends Data {
         public Data setDescription(String description) {
             return this;
         }
+        
+        public String toString() { return getDescription(); };
     };
     
     public static final class Util {

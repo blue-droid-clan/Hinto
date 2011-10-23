@@ -1,5 +1,6 @@
 package clan.blue.droid.hinto.atoms.base;
 
+import clan.blue.droid.common.data.Values;
 import clan.blue.droid.hinto.atoms.Chain;
 import clan.blue.droid.hinto.atoms.Data;
 import clan.blue.droid.hinto.atoms.Function;
@@ -47,5 +48,22 @@ public class BaseChain extends BaseFunction implements Chain {
     @Override
     public String getDescription() {
         return "Chain: a collection of Data items that are accessed via Data.getNext(); is a singly-linked list and can only be appended to at the current time.";
+    }
+    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        Number numLinksInChain = Data.Converter.convertFrom(getNumberOfLinksInChain());
+        sb.append("number of links: ").append(numLinksInChain).append(Values.LINE_FEED);
+        
+        Data current = getNext();
+        int numLinks = numLinksInChain.intValue();
+        for (int i = 0; i < numLinks; i++) {
+            sb.append(current.toString()).append(Values.LINE_FEED);
+            current = current.getNext();
+        }
+        
+        return sb.toString();
     }
 }
