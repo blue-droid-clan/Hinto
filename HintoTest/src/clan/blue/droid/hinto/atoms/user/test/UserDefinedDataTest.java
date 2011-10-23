@@ -1,8 +1,9 @@
-package clan.blue.droid.hinto.atoms.user;
+package clan.blue.droid.hinto.atoms.user.test;
 
+import junit.framework.TestCase;
 import clan.blue.droid.common.util.DateTimeUtil;
 import clan.blue.droid.common.util.StringUtils;
-import junit.framework.TestCase;
+import clan.blue.droid.hinto.atoms.user.UserDefinedData;
 
 public class UserDefinedDataTest extends TestCase {
     
