@@ -8,6 +8,7 @@ import clan.blue.droid.hinto.atoms.user.UserDefinedData;
 public class BaseUserDefinedData extends BaseData implements UserDefinedData {
 
     public BaseUserDefinedData(String name) {
+        super(name); // super(String) sets value to the given value
         this.name = name;
         uuid = UUID.randomUUID();
         id = uuid.toString();
