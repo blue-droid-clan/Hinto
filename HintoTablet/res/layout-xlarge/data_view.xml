@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/data_view_name_label"
+        style="@style/atom_palette_item_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/data_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/data" >
+
+        <requestFocus />
+    </TextView>
+
+    <EditText
+        android:id="@+id/data_view_name_view"
+        style="@style/atom_palette_item_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/data_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/data"
+        android:visibility="gone" />
+
+</LinearLayout>
